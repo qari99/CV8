@@ -1,0 +1,305 @@
+/*PARTIE CSS DE LA PAGE D'ACCUEIL*/
+* {
+    padding: 0px; /*initialisation des bordures intérieures*/
+    margin: 0px; /*initialisation des bordures extérieures*/
+    box-sizing: border-box; /*inclus padding et border à l'intérieur de la boîte, la largeur ne s'ajoute plus à l'élément*/
+}
+body {
+    font-family: 'Century Gothic', Calibri, sans-serif;
+    font-size: 14px; 
+    
+}
+
+header {
+    height: 100px;
+}
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+nav {
+    width: 100%; /*étends le menu sur tout notre page*/
+    background-color: #424558;
+
+}
+nav li {
+    list-style-type: none; /*retire les puces*/
+    float: left; /*je mets les liens en ligne*/
+} 
+nav a {
+    display: inline-block; /*aligne sur une ligne en bloc*/
+    text-decoration: none; /*élimine les traits de soulignements*/
+    padding: 20px 30px;
+    color: #ffffff;
+    text-transform: uppercase; 
+    font-size: 15px; 
+} 
+.table { /*en css lorsqu'un élément possède des flottants, alors la hauteur de cet élément vaut 0*/
+    display: table; /*donc en appliquant ceci, on va rendre la hauteur au menu*/
+    margin: 0 auto;
+}
+/* lorsque la souris pointe sur l'un des liens */
+.menu-ind:hover, .moi, .activite {
+    border-top: 5px solid #44cC88;
+    background-color: rgba(64, 200, 130, 0.15);
+}
+.menu-pro:hover, .parcours, .langue {
+    border-top: 5px solid #F1DC4F;
+    background-color: rgba(241, 211, 79, 0.15);
+}
+.menu-hob:hover, .skill, .recommandation {
+    border-top: 5px solid #0070dd;
+    background-color: rgba(000, 112, 192, 0.15);
+}
+.menu-con:hover, .objectif {
+    border-top: 5px solid #e44d26;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+/* On va essayer d'immobiliser le mobile: on cible les a lorsque les li sont survolés */
+nav li:hover a { /*on enlève 5px du padding top précédent*/
+    padding: 15px 30px 20px 30px;
+}
+
+article {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+section {
+    width: 100%;
+    min-height: 300px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.moi img {
+    box-shadow: 1px 1px 6px black;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -o-transition: width 1.2s, height 1.5s;
+    -webkit-transition: width 1.5s, height 1.5s;
+    -moz-transition: width 1.5s, height 1.5s;
+    -ms-transition: width 1.5s, height 1.5s;
+    transition: width 1.5s, height 1.5s;
+}
+.moi img:hover {
+    width: 200px; height: 230px;
+}
+/*animation pour ma photo de profil*/
+/*
+@keyframes photo {
+    0% {opacity: 1;}
+    25% {opacity: 0.8;}
+    50% {opacity: 0.6;}
+    75% {opacity: 0.4;}
+    100% {opacity: 0.2;}
+}
+.moi img {
+    animation-name: photo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+*/
+/*fin animation*/
+
+
+.sec {
+    margin: 0px 10px;
+}
+.moi .right {
+    margin-top: 20px;
+}
+
+.left {
+    float: left;
+    width: 30%;
+}
+.right {
+    float: left;
+    width: 70%;
+}
+.left_skill, .right_skill, .sousleft, .sousright {
+    width: 50%;
+    float: left;
+}
+.sec::after, .curs::after, .reco::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.center {
+    text-align: center; margin-top: 20px;
+}
+.langue .sec .sousleft {
+    margin-top: 20px;
+}
+.pdf {
+    border: 1px solid gray;
+    height: 130px;
+    box-shadow: 1px 1px 6px black;
+}
+#reco1, #reco2 {
+    margin-top: 45px;
+}
+#skill1, #skill2 {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* PARTIE CSS DE LA PAGE PROJET */
+.orange {
+    border-top: 5px solid #e47d26;
+    background-color: rgba(228, 117, 38, 0.15);
+    margin-bottom: 0px;
+}
+.rose {
+    border-top: 5px solid #e44d96;
+    background-color: rgba(228, 77, 128, 0.15);
+    margin-bottom: 0px;
+}
+.ciel {
+    border-top: 5px solid #21beee;
+    background-color: rgba(228, 77, 38, 0.15);
+    margin-bottom: 0px;
+}
+.left_proj {
+    width: 50%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+.left_proj img {
+    box-shadow: 2px 1px 6px black;
+    min-width: 200px;
+    min-height: 220px;
+}
+.right_proj {
+    width: 45%;
+    float: left;
+    margin-top: 20px;
+}
+.right_proj img {
+    box-shadow: 2px 1px 6px black;
+}
+/*FIN PAGE STYLE PROJET*/
+
+
+
+/*PARTIE CSS DE LA PAGE HOBBIES*/
+.vert {
+    border-top: 5px solid #55fF66;
+    background-color: rgba(70, 240, 80, 0.15);
+}
+.bleu {
+    border-top: 5px solid #2299cc;
+    background-color: rgba(30, 152, 212, 0.15);
+}
+.jaune {
+    border-top: 5px solid #f3e241;
+    background-color: rgba(240, 255, 69, 0.15);
+}
+.maron {
+    border-top: 5px solid rgb(118, 10, 10);
+    background-color: rgba(143, 93, 16, 0.15);
+}
+.rouge {
+    border-top: 5px solid red;
+    background-color: rgba(251, 2, 2, 0.15);
+}
+.violet {
+    border-top: 5px solid rgb(73, 3, 117);
+    background-color: rgba(162, 0, 255, 0.15);
+}
+
+
+/* PARTIE CSS CONTACT */
+.red {
+    border-top: 5px solid #e44d26;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+.red p {
+    text-align: center;
+    margin-top: 30px;
+}
+.red p a {
+    text-decoration: none;
+    color: #424558;
+}
+form p {
+    text-align: center;
+    margin-top: 20px;
+}
+.green {
+    border-top: 5px solid rgb(16, 132, 16);
+    background-color:rgba(20, 247, 10, 0.15)
+}
+.form {
+    border: 30px solid rgb(114, 214, 245);
+    padding: 10px;
+    width: 600px;
+    margin: auto;
+}
+:required {
+    background-color: rgba(228, 77, 38, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive du menu et entête de la page d'accueil*/
+@media screen and (max-width: 780px) {
+    header {height: 50px;}
+    h1 {font-size: 30px; margin: 20px 0 0 0;}
+    nav li a {font-size: 12px; padding: 10px;}
+    nav li:hover a {padding: 5px 10px 10px 10px;}
+}
+
+@media screen and (min-width: 300px) and (max-width: 650px) {
+    h1 {font-size: 20px;}
+    h2 {font-size: 17px;}
+    h3 {font-size: 14px;}
+    h4 {font-size: 12px;}
+    .right, .center {font-size: 11px;}
+    .moi img {width: 80px; height: 100px;}
+    #a_propos {margin-top: 15px;}
+    #motivation, #activite {margin-top: 20px;}
+    .sousleft {font-size: 11px;}
+    progress {width: 50px;}
+    .left_skill, .right_skill {display: flex; flex-direction: column; align-items: flex-start;
+     justify-content: baseline;}
+    .niveau_grp {
+        -o-transform: translate(10px, 0);
+        -webkit-transform: translate(25px, 0);
+        -moz-transform: translate(10px, 0);
+        -ms-transform: translate(10px, 0);
+        transform: translate(10px, 0);
+}
+
+}
+
+
+
+footer {
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: #c5c5c5;
+    border-top: 2px solid #aaaaaa;
+
+}
